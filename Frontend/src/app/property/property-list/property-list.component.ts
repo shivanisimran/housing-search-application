@@ -1,9 +1,51 @@
 import { Component } from '@angular/core';
+import {CommonModule} from '@angular/common';
+import { PropertyCardComponent } from '../property-card/property-card.component';
 
 @Component({
-  imports: [],
+  imports: [CommonModule, PropertyCardComponent],
   selector: 'app-property-list',
   styleUrl: './property-list.component.css',
   templateUrl: './property-list.component.html',
 })
-export class PropertyListComponent {}
+
+export class PropertyListComponent {
+  properties: Array<any> = [
+    {
+      "Id": 1,
+      "Name": "Birla House 1",
+      "Type": "House",
+      "Price": 12000,
+    },
+    {
+      "Id": 2,
+      "Name": "Birla House 2",
+      "Type": "House",
+      "Price": 12000,
+    },
+    {
+      "Id": 3,
+      "Name": "Birla House 3",
+      "Type": "House",
+      "Price": 12000,
+    },
+    {
+      "Id": 4,
+      "Name": "Birla House 4",
+      "Type": "House",
+      "Price": 12000,
+    },
+    {
+      "Id": 5,
+      "Name": "Birla House 5",
+      "Type": "House",
+      "Price": 12000,
+    },
+    {
+      "Id": 6,
+      "Name": "Birla House 6",
+      "Type": "House",
+      "Price": 12000,
+    }
+  ]
+}
