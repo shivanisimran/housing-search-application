@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { PropertyCardComponent } from '../property-card/property-card.component';
+import { HousingService } from '../../services/housing.service';
+
 
 @Component({
   imports: [CommonModule, PropertyCardComponent],
@@ -9,43 +11,19 @@ import { PropertyCardComponent } from '../property-card/property-card.component'
   templateUrl: './property-list.component.html',
 })
 
-export class PropertyListComponent {
-  properties: Array<any> = [
-    {
-      "Id": 1,
-      "Name": "Birla House 1",
-      "Type": "House",
-      "Price": 12000,
-    },
-    {
-      "Id": 2,
-      "Name": "Birla House 2",
-      "Type": "House",
-      "Price": 12000,
-    },
-    {
-      "Id": 3,
-      "Name": "Birla House 3",
-      "Type": "House",
-      "Price": 12000,
-    },
-    {
-      "Id": 4,
-      "Name": "Birla House 4",
-      "Type": "House",
-      "Price": 12000,
-    },
-    {
-      "Id": 5,
-      "Name": "Birla House 5",
-      "Type": "House",
-      "Price": 12000,
-    },
-    {
-      "Id": 6,
-      "Name": "Birla House 6",
-      "Type": "House",
-      "Price": 12000,
+export class PropertyListComponent implements OnInit {
+  properties: any[] = [];
+  constructor(private housingService: HousingService) {}
+
+  ngOnInit(): void {
+      this.housingService.getAllProperties().subscribe(
+          data=>{
+            this.properties = data;
+            console.log(this.properties);
+          },
+          error=>{
+            console.log(error);
+          }
+      );
     }
-  ]
 }
