@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { PropertyCardComponent } from '../property-card/property-card.component';
 import { HousingService } from '../../services/housing.service';
+import { IProperty } from '../IProperty.Interface';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { HousingService } from '../../services/housing.service';
 })
 
 export class PropertyListComponent implements OnInit {
-  properties: any[] = [];
+  properties: IProperty[] = [];
   constructor(private housingService: HousingService) {}
 
   ngOnInit(): void {

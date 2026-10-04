@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IProperty } from '../IProperty.Interface';
 
 @Component({
   selector: 'app-property-card',
@@ -7,5 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export class PropertyCardComponent  {
-   @Input() prop_list: any
+   @Input() prop_list: IProperty[] = [];
 }
