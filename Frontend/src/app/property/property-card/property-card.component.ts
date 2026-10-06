@@ -9,4 +9,4 @@ import { IProperty } from '../IProperty.Interface';
 
 export class PropertyCardComponent  {
    @Input() prop_list: IProperty[] = [];
-}
+} 
