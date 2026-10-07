@@ -4,9 +4,10 @@ import { PropertyListComponent } from './property/property-list/property-list.co
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HousingService } from './services/housing.service';
 import { AddPropertyComponent } from './property/add-property/add-property.component';
+import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
 
 @Component({
-  imports: [RouterOutlet, PropertyListComponent, NavBarComponent, AddPropertyComponent],
+  imports: [RouterOutlet, PropertyListComponent, NavBarComponent, AddPropertyComponent, PropertyDetailComponent],
   providers: [HousingService],
   selector: 'app-root',
   styleUrl: './app.css',

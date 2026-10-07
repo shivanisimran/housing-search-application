@@ -11,7 +11,7 @@ export class HousingService {
   constructor (private http: HttpClient) {}
 
   getAllProperties(): Observable<IProperty[]> {
-      return this.http.get<any[]>('data/properties.json').pipe(
+      return this.http.get<any[]>('/data/properties.json').pipe(
           map((data) => {
             const propertiesArray: Array<IProperty> = [];
             for (const id in data) {
