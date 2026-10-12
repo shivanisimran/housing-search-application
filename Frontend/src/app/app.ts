@@ -5,9 +5,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HousingService } from './services/housing.service';
 import { AddPropertyComponent } from './property/add-property/add-property.component';
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [RouterOutlet, PropertyListComponent, NavBarComponent, AddPropertyComponent, PropertyDetailComponent],
+  imports: [RouterOutlet, PropertyListComponent, NavBarComponent, AddPropertyComponent, PropertyDetailComponent, FormsModule],
   providers: [HousingService],
   selector: 'app-root',
   styleUrl: './app.css',
