@@ -5,10 +5,16 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HousingService } from './services/housing.service';
 import { AddPropertyComponent } from './property/add-property/add-property.component';
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  imports: [RouterOutlet, PropertyListComponent, NavBarComponent, AddPropertyComponent, PropertyDetailComponent, FormsModule],
+  imports: [RouterOutlet, 
+            PropertyListComponent, 
+            NavBarComponent, 
+            AddPropertyComponent, 
+            PropertyDetailComponent, 
+            FormsModule, 
+            ReactiveFormsModule],
   providers: [HousingService],
   selector: 'app-root',
   styleUrl: './app.css',
