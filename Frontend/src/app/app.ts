@@ -6,6 +6,7 @@ import { HousingService } from './services/housing.service';
 import { AddPropertyComponent } from './property/add-property/add-property.component';
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserService } from './services/user.service';
 
 @Component({
   imports: [RouterOutlet, 
@@ -15,7 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
             PropertyDetailComponent, 
             FormsModule, 
             ReactiveFormsModule],
-  providers: [HousingService],
+  providers: [HousingService, UserService],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
