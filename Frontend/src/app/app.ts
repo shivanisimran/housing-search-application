@@ -7,6 +7,7 @@ import { AddPropertyComponent } from './property/add-property/add-property.compo
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
+import {AlertifyService} from './services/alertify.service';
 
 @Component({
   imports: [RouterOutlet, 
@@ -16,7 +17,7 @@ import { UserService } from './services/user.service';
             PropertyDetailComponent, 
             FormsModule, 
             ReactiveFormsModule],
-  providers: [HousingService, UserService],
+  providers: [HousingService, UserService, AlertifyService],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
