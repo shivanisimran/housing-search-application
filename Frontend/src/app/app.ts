@@ -8,6 +8,8 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
 import {AlertifyService} from './services/alertify.service';
+import { AuthService } from './services/auth.service';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @Component({
   imports: [RouterOutlet, 
@@ -16,8 +18,9 @@ import {AlertifyService} from './services/alertify.service';
             AddPropertyComponent, 
             PropertyDetailComponent, 
             FormsModule, 
-            ReactiveFormsModule],
-  providers: [HousingService, UserService, AlertifyService],
+            ReactiveFormsModule,
+            BsDropdownModule],
+  providers: [HousingService, UserService, AlertifyService, AuthService],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

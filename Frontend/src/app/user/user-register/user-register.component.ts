@@ -15,7 +15,7 @@ import { User } from '../../model/user';
 export class UserRegisterComponent implements OnInit {
   registrationForm!: FormGroup;
   user: User = {
-    username: '',
+    userName: '',
     email: '',
     password: '',
     mobile: ''
@@ -55,7 +55,7 @@ export class UserRegisterComponent implements OnInit {
 
   userData(): User {
     return this.user = {
-      username: this.userName.value,
+      userName: this.userName.value,
       email: this.email.value,
       password: this.password.value,
       mobile: this.mobile.value
