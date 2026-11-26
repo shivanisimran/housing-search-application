@@ -12,4 +12,7 @@ import { CommonModule } from '@angular/common';
 
 export class PropertyCardComponent  {
    @Input() prop_list: IProperty[] = [];
-} 
+   @Input() previewName?: string;
+   @Input() previewType?: string;
+   @Input() previewPrice?: number;
+}

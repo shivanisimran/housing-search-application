@@ -10,6 +10,10 @@ import { UserService } from './services/user.service';
 import {AlertifyService} from './services/alertify.service';
 import { AuthService } from './services/auth.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
+
 
 @Component({
   imports: [RouterOutlet, 
@@ -19,7 +23,9 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
             PropertyDetailComponent, 
             FormsModule, 
             ReactiveFormsModule,
-            BsDropdownModule],
+            BsDropdownModule,
+            TabsModule,
+            ButtonsModule],
   providers: [HousingService, UserService, AlertifyService, AuthService],
   selector: 'app-root',
   styleUrl: './app.css',
