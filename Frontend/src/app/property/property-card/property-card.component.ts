@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { IProperty } from '../IProperty.Interface';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { IPropertyBase } from '../../model/ipropertybase';
 
 @Component({
   imports: [RouterLink, CommonModule],
@@ -11,8 +11,14 @@ import { CommonModule } from '@angular/common';
 })
 
 export class PropertyCardComponent  {
-   @Input() prop_list: IProperty[] = [];
+   @Input() prop_list: IPropertyBase[] = [];
    @Input() previewName?: string;
    @Input() previewType?: string;
    @Input() previewPrice?: number;
+   @Input() previewBHK?: number;
+   @Input() previewFType?: string;
+   @Input() previewBuiltArea?: number;
+   @Input() previewCity?: string;
+
+   @Input() hideIcons: boolean = false;
 }

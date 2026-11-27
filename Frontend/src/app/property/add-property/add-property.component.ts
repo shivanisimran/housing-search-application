@@ -7,8 +7,7 @@ import { TabsetComponent, TabsModule } from 'ngx-bootstrap/tabs';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { PropertyCardComponent } from '../property-card/property-card.component';
-import { IProperty } from '../IProperty.Interface';
-
+import { IPropertyBase } from '../../model/ipropertybase';
 
 
 @Component({
@@ -26,15 +25,21 @@ export class AddPropertyComponent implements OnInit {
   propertyTypes: Array<string> = ['House', 'Apartment', 'Duplex'];
   furnishTypes: Array<string> = ['Fully', 'Semi', 'Unfurnished'];
 
-  propertyView: IProperty = {
+  propertyView: IPropertyBase = {
     Id: 0,
-    SellRent: 1,
     Name: '',
-    Type: ''
+    Price: undefined,
+    SellRent: 0,
+    PType: '',
+    FType: '',
+    BHK: 0,
+    BuiltArea: 0,
+    City: '',
+    RTM: 0,
   };
 
   constructor(private router: Router) { }
-  
+
 
   ngOnInit() {
   }
@@ -44,7 +49,8 @@ export class AddPropertyComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log("Form Submitted");
+    console.log("Congrats, Form Submitted");
+    console.log('SellRent=' + this.addPropertyForm.value.basicInfo.SellRent); 
     console.log(this.addPropertyForm);
   }
 
